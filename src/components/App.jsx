@@ -16,24 +16,26 @@ export class App extends Component {
   };
 
   formSubmitHandler = ({ name, number }) => {
-    const findName = this.state.contacts.filter(
-      contact => contact.name === name
+    const normalizedName = name.toLowerCase();
+    const findName = this.state.contacts.some(
+      contact => contact.name.toLowerCase() === normalizedName
     );
-    if (findName.length > 0) {
+    if (findName) {
       return alert(`${name} is already in contacts`);
-    } else {
-      const contact = { id: nanoid(), name, number };
-
-      this.setState(prevState => ({
-        contacts: [...prevState.contacts, contact],
-      }));
     }
+    const contact = { id: nanoid(), name, number };
+
+    this.setState(prevState => ({
+      contacts: [...prevState.contacts, contact],
+    }));
   };
 
   onVisibleContacts = () => {
     const { contacts, filter } = this.state;
-
-    return contacts.filter(({ name }) => name.toLowerCase().includes(filter));
+    const normalizedFilter = filter.toLowerCase();
+    return contacts.filter(({ name }) =>
+      name.toLowerCase().includes(normalizedFilter)
+    );
   };
 
   changeFilter = evt => {
