@@ -1,0 +1,19 @@
+.contactsList {
+  list-style-type: disc;
+}
+
+.contactsItem {
+  display: flex;
+  align-items: baseline;
+}
+
+.contactsButton {
+  width: 50px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 10%;
+  box-shadow: 2px 2px 4px #000000;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
