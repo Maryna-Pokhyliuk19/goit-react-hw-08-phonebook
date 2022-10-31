@@ -11,7 +11,7 @@ export const App = () => {
 
   const [filter, setFilter] = useState('');
 
-  const formSubmitHandler = ({ name, number }) => {
+  const formSubmitHandler = (name, number) => {
     const normalizedName = name.toLowerCase();
     const findName = contacts.some(contact => contact.name === normalizedName);
     if (findName) {

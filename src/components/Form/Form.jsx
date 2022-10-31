@@ -69,6 +69,5 @@ export const Form = ({ onSubmit }) => {
 };
 
 Form.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
