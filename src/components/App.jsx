@@ -22,7 +22,7 @@ export const App = () => {
     setContacts(contacts => [...contacts, contact]);
   };
 
-  const onVisibleContacts = () => {
+  const getVisibleContacts = () => {
     return contacts.filter(({ name }) => name.toLowerCase().includes(filter));
   };
 
@@ -43,11 +43,15 @@ export const App = () => {
       <h1>Phonebook</h1>
       <Form onSubmit={formSubmitHandler} />
       <h2>Contacts</h2>
-      <Filtr value={filter} onChange={changeFilter} />
-      <ContactsList
-        contacts={onVisibleContacts()}
-        onDeleteContact={onDeleteContact}
-      />
+      {getVisibleContacts().length > 0 && (
+        <>
+          <Filtr value={filter} onChange={changeFilter} />
+          <ContactsList
+            contacts={getVisibleContacts()}
+            onDeleteContact={onDeleteContact}
+          />
+        </>
+      )}
     </div>
   );
 };
