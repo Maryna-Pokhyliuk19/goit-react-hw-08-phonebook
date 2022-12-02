@@ -1,30 +1,25 @@
-import { ContactsForm } from './Form/Form';
-import { ContactsList } from './ContactsList/ContactsList';
-import { Filter } from './Filtr/Filter';
+import { Contacts } from 'pages/Contacts';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import { useDispatch, useSelector } from 'react-redux';
-import { getError, getIsLoading } from 'redux/selectors';
+import { useDispatch } from 'react-redux';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { refreshUser } from 'redux/auth-operations';
+import { Layout } from './Layout/Layout';
+import { LoginForm } from './LoginForm/LoginForm';
+import { RegisterForm } from './RegisterForm/RegisterForm';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
-
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
-
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <ContactsForm />
-      <h2>Contacts</h2>
-      {isLoading && !error && <b>Request in progress...</b>}
-      <>
-        <Filter />
-        <ContactsList />
-      </>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Navigate to={'login'} />} />
+        <Route path="registration" element={<RegisterForm />} />
+        <Route path="login" element={<LoginForm />} />
+        <Route path="contacts" element={<Contacts />} />
+      </Route>
+    </Routes>
   );
 };
