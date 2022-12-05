@@ -7,3 +7,9 @@
 .username {
   font-weight: 700;
 }
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  color: blue;
+}
