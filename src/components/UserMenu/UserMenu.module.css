@@ -1,15 +1,49 @@
 .wrapper {
   display: flex;
   align-items: center;
+  margin-right: 0;
+
   gap: 12px;
 }
 
 .username {
-  font-weight: 700;
+  color: #52eb52;
+  margin-left: 50px;
+  text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+    3px 4px 4px rgba(179, 147, 211, 0.15), 4px 6px 4px rgba(179, 147, 211, 0.2),
+    5px 8px 4px rgba(179, 147, 211, 0.25);
 }
 
 .link {
+  padding: 8px 16px;
   text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: rgb(56, 6, 136);
+}
+
+.active {
   font-weight: 700;
-  color: blue;
+  text-decoration: none;
+  color: rgb(197, 44, 44);
+}
+
+.button {
+  padding: 6px 20px;
+  color: #000000;
+  background-color: #62d8e0;
+  border: 1px solid;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: #52eb52;
+  border-color: #000000;
+}
+
+button:focus {
+  background-color: #52eb52;
+  border-color: #000000;
 }

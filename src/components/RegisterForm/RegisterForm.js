@@ -16,6 +16,7 @@ export const RegisterForm = () => {
       <label className={css.label}>
         Username
         <input
+          className={css.input}
           type="text"
           {...registerForm('name', { required: 'Enter your name' })}
         />
@@ -23,6 +24,7 @@ export const RegisterForm = () => {
       <label className={css.label}>
         Email
         <input
+          className={css.input}
           type="email"
           {...registerForm('email', { required: 'Enter your email' })}
         />
@@ -30,11 +32,14 @@ export const RegisterForm = () => {
       <label className={css.label}>
         Password
         <input
+          className={css.input}
           type="password"
           {...registerForm('password', { required: 'Enter your password' })}
         />
       </label>
-      <button type="submit">Register</button>
+      <button className={css.button} type="submit">
+        Register
+      </button>
     </form>
   );
 };

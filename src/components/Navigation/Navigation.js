@@ -6,7 +6,6 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <h2>Welcome to PhoneBook</h2>
       {isLoggedIn && (
         <NavLink className={css.link} to="/contacts">
           Contacts

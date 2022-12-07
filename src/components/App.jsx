@@ -9,7 +9,9 @@ import { LoginForm } from './LoginForm/LoginForm';
 import { RegisterForm } from './RegisterForm/RegisterForm';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+// import { lazy } from 'react';
 
+// const Contacts = lazy(() => import('pages/Contacts'));
 export const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectRefreshing);

@@ -1,9 +1,44 @@
 .form {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid;
+  border-color: #f2f2f2;
+  border-radius: 6px;
+  background-color: #795ae7;
 }
 
 .label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 200px;
+  margin-bottom: 30px;
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.button {
+  padding: 6px 20px;
+  color: #000000;
+  background-color: #62d8e0;
+  border: 1px solid;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: #52eb52;
+  border-color: #000000;
+}
+
+button:focus {
+  background-color: #52eb52;
+  border-color: #000000;
 }

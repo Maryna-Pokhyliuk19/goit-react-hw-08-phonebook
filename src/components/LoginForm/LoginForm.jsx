@@ -5,11 +5,7 @@ import css from './LoginForm.module.css';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-  const {
-    register: registerForm,
-    handleSubmit,
-    
-  } = useForm();
+  const { register: registerForm, handleSubmit } = useForm();
 
   return (
     <form
@@ -19,6 +15,7 @@ export const LoginForm = () => {
       <label className={css.label}>
         Email
         <input
+          className={css.input}
           type="email"
           {...registerForm('email', { required: 'Enter your email' })}
         />
@@ -26,11 +23,14 @@ export const LoginForm = () => {
       <label className={css.label}>
         Password
         <input
+          className={css.input}
           type="password"
           {...registerForm('password', { required: 'Enter your password' })}
         />
       </label>
-      <button type="submit">Log In</button>
+      <button className={css.button} type="submit">
+        Log In
+      </button>
     </form>
   );
 };

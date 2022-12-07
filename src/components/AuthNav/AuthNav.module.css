@@ -2,10 +2,23 @@
   display: inline-block;
   text-decoration: none;
   padding: 12px;
-  font-weight: 700;
+  font-weight: 900;
   color: #2a363b;
 }
 
-.link.active {
-  color: #e84a5f;
+.link {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: rgb(56, 6, 136);
+}
+
+.active {
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(197, 44, 44);
 }

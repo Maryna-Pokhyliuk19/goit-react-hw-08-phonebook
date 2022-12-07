@@ -6,6 +6,8 @@
 .inputFilter {
   width: 150px;
   margin-top: 5px;
+  margin-left: 10px;
+  border-radius: 4px solid;
 }
 
 inputF.inputFilter {
