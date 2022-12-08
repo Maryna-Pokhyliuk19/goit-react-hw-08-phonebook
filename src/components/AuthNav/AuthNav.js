@@ -5,18 +5,20 @@ export const AuthNav = () => {
   return (
     <header className={css.header}>
       <h2 className={css.title}>Welcome to PhoneBook</h2>
-      <NavLink
-        className={({ isActive }) => (isActive ? css.active : css.link)}
-        to="registration"
-      >
-        Register
-      </NavLink>
-      <NavLink
-        className={({ isActive }) => (isActive ? css.active : css.link)}
-        to="login"
-      >
-        Log In
-      </NavLink>
+      <div className={css.headerLink}>
+        <NavLink
+          className={({ isActive }) => (isActive ? css.active : css.link)}
+          to="registration"
+        >
+          Register
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? css.active : css.link)}
+          to="login"
+        >
+          Log In
+        </NavLink>
+      </div>
     </header>
   );
 };

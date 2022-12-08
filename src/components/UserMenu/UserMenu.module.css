@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   align-items: center;
-  margin-right: 0;
+  justify-content: space-between;
 
   gap: 12px;
 }
@@ -26,7 +26,10 @@
 }
 
 .active {
-  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+    3px 4px 4px rgba(179, 147, 211, 0.15), 4px 6px 4px rgba(179, 147, 211, 0.2),
+    5px 8px 4px rgba(179, 147, 211, 0.25);
+  font-weight: 900;
   text-decoration: none;
   color: rgb(197, 44, 44);
 }

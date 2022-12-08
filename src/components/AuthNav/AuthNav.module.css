@@ -7,9 +7,13 @@
 
 .header {
   display: flex;
-  max-width: 1200px;
+
   justify-content: space-between;
   align-items: center;
+}
+
+.headerLink {
+  margin: 0;
 }
 
 .link {
