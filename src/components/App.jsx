@@ -1,17 +1,17 @@
-import { Contacts } from 'pages/Contacts';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { refreshUser } from 'redux/auth-operations';
 import { selectRefreshing } from 'redux/selectors';
-import { Layout } from './Layout/Layout';
+import Layout from './Layout/Layout';
 import { LoginForm } from './LoginForm/LoginForm';
 import { RegisterForm } from './RegisterForm/RegisterForm';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
-// import { lazy } from 'react';
+import { lazy } from 'react';
 
-// const Contacts = lazy(() => import('pages/Contacts'));
+const Contacts = lazy(() => import('pages/Contacts'));
+
 export const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectRefreshing);

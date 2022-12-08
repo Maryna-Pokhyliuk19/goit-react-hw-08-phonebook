@@ -10,7 +10,7 @@ export const AppBar = () => {
   return (
     <header className={css.header}>
       <container className={css.container}>
-        <h2 className={css.title}>Welcome to PhoneBook</h2>
+        {/* <h2 className={css.title}>Welcome to PhoneBook</h2> */}
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </container>
     </header>
