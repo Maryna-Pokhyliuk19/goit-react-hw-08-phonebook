@@ -3,7 +3,7 @@ import css from './AuthNav.module.css';
 
 export const AuthNav = () => {
   return (
-    <div>
+    <header className={css.header}>
       <h2 className={css.title}>Welcome to PhoneBook</h2>
       <NavLink
         className={({ isActive }) => (isActive ? css.active : css.link)}
@@ -17,6 +17,6 @@ export const AuthNav = () => {
       >
         Log In
       </NavLink>
-    </div>
+    </header>
   );
 };
