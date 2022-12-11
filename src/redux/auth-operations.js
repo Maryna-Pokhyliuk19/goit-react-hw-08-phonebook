@@ -34,7 +34,7 @@ export const logIn = createAsyncThunk(
 
       return res.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return thunkAPI.rejectWithValue('Incorrect login or password');
     }
   }
 );

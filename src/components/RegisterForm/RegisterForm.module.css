@@ -20,7 +20,7 @@
 
 .input {
   width: 200px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   padding: 8px;
   border: 1px solid;
   border-radius: 4px;
@@ -41,4 +41,10 @@ button:hover {
 button:focus {
   background-color: #52eb52;
   border-color: #000000;
+}
+
+.error {
+  color: red;
+  font-style: italic;
+  margin-left: 10px;
 }

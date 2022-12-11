@@ -1,6 +1,4 @@
 .appHeader {
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 16px;
   border-bottom: 1px solid #2a363b;
   padding: 20px 10px 20px 10px;
@@ -11,10 +9,4 @@
   text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
     3px 4px 4px rgba(179, 147, 211, 0.15), 4px 6px 4px rgba(179, 147, 211, 0.2),
     5px 8px 4px rgba(179, 147, 211, 0.25);
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }

@@ -42,3 +42,9 @@ button:focus {
   background-color: #52eb52;
   border-color: #000000;
 }
+
+.error {
+  color: red;
+  font-style: italic;
+  margin-left: 10px;
+}
